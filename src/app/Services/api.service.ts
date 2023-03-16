@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class ApiService {
 
   constructor(public http:HttpClient) { }
-  url="https://localhost:7067/api/"
+  url="https://localhost:7123/api/"
   async getAll(Controller:String){
     var response:any
     await this.http.get(this.url+Controller).toPromise().then((res=>{

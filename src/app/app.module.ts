@@ -12,11 +12,17 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HttpClientModule } from '@angular/common/http';
+import { FarmaciasComponent } from './Components/farmacias/farmacias.component';
+import { FarmacosComponent } from './Components/farmacos/farmacos.component';
+import { ClientesComponent } from './Components/clientes/clientes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent
+    MenuComponent,
+    FarmaciasComponent,
+    FarmacosComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
