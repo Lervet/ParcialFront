@@ -9,13 +9,15 @@ import { map, shareReplay } from 'rxjs/operators';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-
+  login = "";
   isWeb$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Web)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
-
+    cerrar(){
+      localStorage.setItem('login','logout')
+  }
   constructor(private breakpointObserver: BreakpointObserver) {}
 
 }

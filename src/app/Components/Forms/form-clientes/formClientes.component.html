@@ -1,0 +1,30 @@
+<div class="container">
+    <form class="example-form" [formGroup]="clientesForm" novalidate (ngSubmit)="onSubmit()">
+      <mat-label>Formulario Clientes</mat-label>
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre:</mat-label>
+          <input matInput placeholder="ej: Pablo" formControlName="name">
+          <mat-error *ngIf="clientesForm.controls['name'].hasError('required')">
+            Este campo es <strong>obligatorio*</strong>
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <mat-label>Correo:</mat-label>
+          <input type="email" matInput placeholder="ej: ex@ex.com" formControlName="correo">
+          <mat-error *ngIf="clientesForm.controls['correo'].hasError('required')">
+            Este campo es <strong>obligatorio*</strong>
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+        <mat-label>Cedula:</mat-label>
+        <input matInput placeholder="ej: 192802827" formControlName="ced">
+        <mat-error *ngIf="clientesForm.controls['ced'].hasError('required')">
+          Este campo es <strong>obligatorio*</strong>
+        </mat-error>
+      </mat-form-field>
+      
+        <button mat-raised-button >Crear</button>
+    </form>
+  </div>
+  

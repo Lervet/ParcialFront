@@ -1,0 +1,23 @@
+<div class="container">
+    <form class="example-form" [formGroup]="farmaciasForm" novalidate (ngSubmit)="onSubmit()">
+      <mat-label>Formulario Farmacias</mat-label>
+        <mat-form-field class="example-full-width">
+          <mat-label>Nombre:</mat-label>
+          <input matInput placeholder="ej: Pablo" formControlName="name">
+          <mat-error *ngIf="farmaciasForm.controls['name'].hasError('required')">
+            Este campo es <strong>obligatorio*</strong>
+          </mat-error>
+        </mat-form-field>
+  
+        <mat-form-field class="example-full-width">
+          <mat-label>Direccion:</mat-label>
+          <input matInput placeholder="ej: cll 72" formControlName="dire">
+          <mat-error *ngIf="farmaciasForm.controls['dire'].hasError('required')">
+            Este campo es <strong>obligatorio*</strong>
+          </mat-error>
+        </mat-form-field>
+      
+        <button mat-raised-button >Crear</button>
+    </form>
+  </div>
+  
